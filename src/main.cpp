@@ -7,5 +7,6 @@
 int main()
 {
     std::cout << "Hello, Universidad Nacional!" << std::endl;
+    std::cout << "Hello, Universidad Nacional!" << std::endl;
     return 0;
 }
