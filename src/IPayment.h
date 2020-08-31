@@ -15,7 +15,7 @@ public:
 
     virtual ~IPayment();
 
-    virtual std::string sendPayment();
+    virtual std::string sendPayment()= 0;
 
 };
 #endif //LAB05_DEPENDENCY_INVERSION_SOLUTION_H
