@@ -7,11 +7,15 @@
 
 
 #include <string>
-#include "IPayment.h"
 
-class BankTransferSender: public IPayment  {
+
+class IBankTransferSender  {
 public:
-    std::string sendPayment() override;
+    IBankTransferSender();
+
+    virtual ~IBankTransferSender();
+
+    virtual std::string processPaymentBankTransfer()= 0;
 };
 
 

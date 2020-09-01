@@ -39,16 +39,13 @@ std::string Person::toString() const {
 }
 
 std::string Person::processPaymentBankTransfer() {
-    BankTransferSender bankTransferSender;
-    return bankTransferSender.sendPayment();
+    return "Sending the money by transference";
 }
 
 std::string Person::processPaymentCash() {
-    CashSender cashSender;
-    return cashSender.sendPayment();
+    return "Give the money in the hands";
 }
 
 std::string Person::processPaymentCheck() {
-    CheckSender checkSender;
-    return checkSender.sendPayment();
+    return "Sending the check with the money";
 }
