@@ -3,14 +3,14 @@
 
 #include <string>
 #include <ostream>
-#include "IBankTransferSender.h"
-#include "ICashSender.h"
-#include "ICheckSender.h"
+#include "BankTransferSender.h"
+#include "CashSender.h"
+#include "CheckSender.h"
 
 /**
  * Abstract Class of Person
  */
-class Person: public IBankTransferSender, ICashSender, ICheckSender {
+class Person: public BankTransferSender, CashSender, CheckSender {
 public:
 
     // Constructors
@@ -31,9 +31,7 @@ public:
 
     void setDocumentId(int documentId);
 
-    std::string processPaymentBankTransfer() override;
-    std::string processPaymentCash() override;
-    std::string processPaymentCheck() override;
+    std::string processPayment(IPaymentSender* paymentSender);
 
     virtual std::string toString() const; // Virtual
 private:
